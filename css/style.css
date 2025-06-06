@@ -1,0 +1,278 @@
+body {
+  font-family: "Roboto Slab", serif;
+}
+
+:root {
+  --prime: #563d7c;
+  --second: #33d1cc;
+  --third: #ff3150;
+}
+
+.main-title::after {
+  content: "";
+  width: 150px;
+  height: 2px;
+  background-color: var(--second);
+  position: absolute;
+  bottom: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.overlay {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+/* Start Nav */
+
+.navbar {
+  background-color: var(--prime);
+}
+
+.navbar img {
+  width: 100px;
+  height: 80px;
+  filter: invert(1);
+}
+
+.navbar .navbar-nav .nav-link {
+  color: white;
+}
+.navbar .navbar-nav .nav-link.active,
+.navbar .navbar-nav .nav-link:focus,
+.navbar .navbar-nav .nav-link:hover {
+  color: var(--second);
+}
+.navbar .search {
+  border-left: var(--second) solid 2px;
+}
+
+.navbar .search svg {
+  color: var(--second);
+}
+
+.navbar .navbar-toggler {
+  font-size: 25px;
+  color: white;
+  border-color: white;
+}
+
+/* End Nav */
+
+/* Start Landing */
+
+.landing {
+  background: url(../img/ph-2.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: calc(100vh - 106px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.landing .lan-info {
+  position: relative;
+}
+
+/* End Landing */
+
+/* Start feat */
+.feat-img img {
+  width: 150px;
+  height: 150px;
+}
+/* End feat */
+
+/* Start work */
+
+.our-work {
+  background-color: #eee;
+}
+
+.our-work ul .active {
+  background-color: var(--third);
+  color: yellow;
+  border-radius: 5px;
+}
+
+.our-work ul li {
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+}
+.our-work ul li:not(.active):hover {
+  color: var(--third);
+}
+
+.our-work .box {
+  padding: 5px;
+  overflow: hidden;
+  position: relative;
+}
+
+.box img {
+  width: 200px;
+  height: 200px;
+  cursor: pointer;
+}
+
+.our-work .box::before {
+  content: attr(data-work);
+  position: absolute;
+  background-color: #33d1cc80;
+  width: calc(100% - 10px);
+  height: calc(100% - 10px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  color: white;
+  transition: 0.4s;
+  font-size: 1.5rem;
+  transform: translateX(calc(-100% - 10px));
+}
+
+.our-work .box:hover::before {
+  transform: translateX(0);
+}
+
+/* End work */
+
+/* Start stuff */
+
+.stuff .disc {
+  max-width: 500px;
+}
+
+.col-lg-8 img {
+  width: 500px;
+}
+
+/* End stuff */
+
+/* Start Team */
+
+.team {
+  background-color: #fff;
+}
+
+.team h2 {
+  color: yellow;
+}
+
+.team .box h4 {
+  background-color: var(--second);
+}
+/* End Team */
+
+/* Start project */
+
+.project {
+  background-color: var(--prime);
+}
+
+/* End project */
+
+/* Start Blog */
+.blog .card {
+  border: none;
+  display: flex;
+  align-items: center;
+  margin-bottom: 25px;
+}
+.blog .card img {
+  width: 150px;
+  height: 150px;
+}
+/* End Blog */
+
+/* Start Subscribe */
+.subscribe {
+  background-color: var(--prime);
+  padding: 100px 0;
+}
+.subscribe input[type="email"] {
+  border: none;
+  border-bottom: 1px solid white;
+}
+.subscribe input[type="email"]:focus {
+  outline: none;
+}
+.subscribe ::placeholder {
+  color: white;
+}
+
+.subscribe input[type="submit"] {
+  margin-top: 20px;
+}
+
+/* End Subscribe */
+
+/* Start Footer */
+
+.footer {
+  background-color: #061737;
+}
+
+.footer .info img {
+  width: 100px;
+  height: 80px;
+  filter: invert(1);
+}
+
+.footer .copyright > span {
+  color: var(--second);
+}
+
+.footer .copyright div span {
+  color: var(--third);
+}
+
+.footer .contact ul svg {
+  width: 20px;
+  height: 20px;
+}
+
+.footer .links ul {
+  line-height: 3.5;
+}
+.footer .links ul li {
+  transition: 0.3s;
+  cursor: pointer;
+}
+.footer .links ul li:hover {
+  color: #fff !important;
+  padding-left: 10px;
+}
+
+.footer .facebook {
+  background-color: #1877f2;
+}
+.footer .twitter {
+  background-color: #1da1f2;
+}
+.footer .linkedin {
+  background-color: #0077b5;
+}
+.footer .whatsapp {
+  background-color: #25d366;
+}
+
+/* End Footer */
+
+@media (max-width: 992px) {
+  .navbar-nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .footer .contact ul {
+    justify-content: center;
+  }
+}
